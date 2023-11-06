@@ -1,0 +1,49 @@
+<script>
+export default {
+    data() {
+        return {
+            porco: 'fragola'
+        }
+    }
+}
+</script>
+
+
+<template>
+    <div>
+        <footer>
+            <aside>
+                <div class="container">
+                    <div class="row justify">
+                        <div class="col">
+
+                            <h4>
+                                Boolando s.r.l
+                            </h4>
+
+                            <ul>
+                                <li>Informazioni sulla privacy</li>
+                                <li>Informazioni legali</li>
+                                <li>diritti di recesso</li>
+                            </ul>
+
+                        </div>
+                        <div class="col">
+                            <p>Trovaci su :</p>
+                            <div class="social">
+
+                                <img src="./img/facebook.png" alt="">
+                                <img src="./img/youtube.png" alt="">
+                                <img src="./img/twitter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </footer>
+    </div>
+</template>
+
+<style lang="sass" scoped>
+
+</style>
