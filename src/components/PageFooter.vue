@@ -2,12 +2,11 @@
 export default {
     data() {
         return {
-            porco: 'fragola'
+            ciao: 'fragola'
         }
     }
 }
 </script>
-
 
 <template>
     <div>
@@ -44,6 +43,17 @@ export default {
     </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+footer {
+    background-color: rgb(36, 36, 36);
+    min-height: 30px;
+    padding: 10px;
+    color: white;
+}
 
+.row {
+    .col {
+        padding: 10px;
+    }
+}
 </style>

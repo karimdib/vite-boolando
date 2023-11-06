@@ -8,11 +8,10 @@ export default {
 }
 </script>
 
-
 <template>
     <div>
         <header>
-            <nav class="debug">
+            <nav>
                 <div class="container">
                     <div class="row justify">
                         <div class="col-">
@@ -21,14 +20,13 @@ export default {
                             <span>Bambini &nbsp </span>
                         </div>
                         <div class="col-">
-                            <img id="logo" src="./img/boolean-logo.png" alt="">
+
                         </div>
                         <div class="col-icon">
-                            <div>
-                                <span>&#9825;</span>
-                                <span>&#128717</span>
-                                <span>user </span>
-                            </div>
+                            <img src="/img/boolean-logo.png" alt="">
+                        </div>
+                        <div>
+                            <span>&#9825;</span>
                         </div>
                     </div>
                 </div>
@@ -37,6 +35,26 @@ export default {
     </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+header {
+    padding: 15px;
+    background-color: orangered;
+    margin-bottom: 20px;
+    color: white;
+}
 
+.justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.col-icon {
+    img {
+        max-height: 20px;
+        text-align: center;
+
+    }
+}
 </style>

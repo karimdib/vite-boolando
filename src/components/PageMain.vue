@@ -1,5 +1,9 @@
 <script>
+import Card from './Card.vue';
 export default {
+    component: {
+        Card,
+    },
     data() {
         return {
             main: 'ciao'
@@ -7,7 +11,6 @@ export default {
     }
 }
 </script>
-
 
 <template>
     <div>
@@ -19,133 +22,29 @@ export default {
                         <!--inizio-prima-img-->
                         <div class="col-4 first-image">
 
-                            <div>
-                                <img class="web-1" src="./img/1.webp" alt="">
-                                <img class="web-2" src="./img/1b.webp" alt="">
-                            </div>
+                            <figure>
+                                <img class="web-1" src="/img/1.webp" alt="">
+                                <img class="web-2" src="/img/1b.webp" alt="">
+                            </figure>
 
 
                             <p class="brand">Levis</p>
                             <h4 class="product">RELAXED FIT TEE UNISEX</h4>
 
-                            <div>
+                            <div class="price">
                                 <span class="new-price">14,99 &euro;</span>
                                 <span class="old-price">29,99 &euro;</span>
                             </div>
 
-                            <p class="red">-50%</p>
-                            <p class="green">Sostenibilità</p>
-                            <p id="heart" class="heart">&hearts;</p>
+                            <div class="absolute">
+                                <p class="red">-50%</p>
+                                <p class="green">Sostenibilità</p>
+                                <p id="heart" class="heart">&hearts;</p>
+                            </div>
+
 
                         </div>
                         <!--fine-prima-img-->
-
-                        <!--inizio-seonda-img-->
-                        <div class="col-4">
-
-                            <img class="web-1" src="./img/2.webp" alt="">
-                            <img class="web-2" src="./img/2b.webp" alt="">
-
-                            <p class="brand">Guess</p>
-                            <h4 class="product">ROSES TEE</h4>
-
-                            <div>
-                                <span class="new-price">20,99 &euro;</span>
-                                <span class="old-price">29,99 &euro;</span>
-                            </div>
-
-                            <p class="red">-50%</p>
-                            <p class="heart">&hearts;</p>
-
-                        </div>
-                        <!--fine-seconda-img-->
-
-                        <!--inizio-terza-img-->
-                        <div class="col-4">
-
-                            <img class="web-1" src="./img/3.webp" alt="">
-                            <img class="web-2" src="./img/3b.webp" alt="">
-
-                            <p class="brand">Come zucchero filato</p>
-                            <h4 class="product">VOGLIA DI COLORI A PASTELLO</h4>
-
-                            <div>
-                                <span class="new-price">20,99 &euro;</span>
-                                <span class="old-price">29,99 &euro;</span>
-                            </div>
-
-                            <p class="red">-50%</p>
-                            <p class="heart">&hearts;</p>
-
-                        </div>
-                        <!--fine-terza-img-->
-
-                    </div>
-                </div>
-            </section>
-            <!--fine prima section-->
-
-            <!--inizio seconda section-->
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <!--inizio-quarta-img-->
-                        <div class="col-4">
-
-                            <img class="web-1" src="./img/4.webp" alt="">
-                            <img class="web-2" src="./img/4b.webp" alt="">
-
-                            <p class="brand">Levis</p>
-                            <h4 class="product"> TEE UNISEX</h4>
-
-                            <div>
-                                <span class="new-price">14,99 &euro;</span>
-                                <span class="old-price">29,99 &euro;</span>
-                            </div>
-
-                            <p class="red">-50%</p>
-                            <p class="green">Sostenibilità</p>
-                            <p class="heart">&hearts;</p>
-
-                        </div>
-                        <!--fine quarta-img-->
-
-                        <!--inizio-quinta-img-->
-                        <div class="col-4">
-
-                            <img class="web-1" src="./img/5.webp" alt="">
-                            <img class="web-2" src="./img/5b.webp" alt="">
-
-                            <p class="brand">Maya Deluxe</p>
-                            <h4 class="product">STRIPE BODICE</h4>
-
-                            <div>
-                                <span class="new-price">99,99 &euro;</span>
-                                <p class="heart">&hearts;</p>
-                            </div>
-
-                        </div>
-                        <!--fine-quinta-img-->
-
-                        <!--inizio-sesta-img-->
-                        <div class="col-4">
-
-                            <img class="web-1" src="./img/6.webp" alt="">
-                            <img class="web-2" src="./img/6b.webp" alt="">
-
-                            <p class="brand">Esprit</p>
-                            <h4 class="product">MAGLIONE-BLACK</h4>
-
-                            <div>
-                                <span class="new-price">29,99 &euro;</span>
-                            </div>
-
-                            <p class="green-2">Sostenibilità</p>
-                            <p class="heart">&hearts;</p>
-
-                        </div>
-                        <!--fine-sesta-img-->
-
                     </div>
                 </div>
             </section>
@@ -153,6 +52,86 @@ export default {
     </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+.col-4 {
+    padding: 5px;
 
+    figure {
+        position: relative;
+    }
+
+    p {
+        width: max-content;
+    }
+}
+
+
+.absolute {
+    .red {
+        background-color: red;
+        position: absolute;
+        padding: 4px;
+        bottom: 125px;
+        left: 10px;
+        color: white;
+        z-index: 40;
+    }
+
+    .green {
+        background-color: green;
+        color: white;
+        padding: 4px;
+        position: absolute;
+        bottom: 125px;
+        left: 60px;
+        z-index: 44;
+    }
+
+    .heart {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background: white;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 32;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.price {
+    .new-price {
+        color: red;
+        padding: 0 5px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+    }
+}
+
+.web-1 {
+    z-index: 10;
+    position: relative;
+
+    &:hover {
+        z-index: 2;
+    }
+}
+
+.web-2 {
+    position: relative;
+    z-index: 9;
+    position: absolute;
+    left: 0;
+
+    &:hover {
+        z-index: 20;
+    }
+}
 </style>
