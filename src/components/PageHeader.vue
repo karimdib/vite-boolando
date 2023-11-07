@@ -2,7 +2,6 @@
 export default {
     data() {
         return {
-            message: 'ciao'
         }
     }
 }
@@ -23,8 +22,10 @@ export default {
                         <div class="col-icon">
                             <img src="/img/boolean-logo.png" alt="">
                         </div>
-                        <div>
-                            <span>&#9825;</span>
+                        <div class="entity-icon">
+                            <div><awesome-icon icon="bag-shopping" /></div>
+                            <div><awesome-icon icon="user" /></div>
+                            <div><awesome-icon icon="heart" /></div>
                         </div>
                     </div>
                 </div>
@@ -53,6 +54,15 @@ header {
         max-height: 20px;
         text-align: center;
 
+    }
+
+}
+
+.entity-icon {
+    display: flex;
+
+    div {
+        padding: 0px 5px;
     }
 }
 </style>
