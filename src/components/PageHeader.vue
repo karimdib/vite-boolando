@@ -19,9 +19,7 @@ export default {
                             <span>Uomo &nbsp </span>
                             <span>Bambini &nbsp </span>
                         </div>
-                        <div class="col-">
 
-                        </div>
                         <div class="col-icon">
                             <img src="/img/boolean-logo.png" alt="">
                         </div>

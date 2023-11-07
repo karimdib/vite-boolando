@@ -22,18 +22,8 @@ export default {
 <template>
   <div>
     <PageHeader />
-    <div class="container">
-      <div class="row ">
-        <section class="row">
-          <div v-for="n in 6" class="col-4">
-            <Card />
-          </div>
-        </section>
-      </div>
-    </div>
-
+    <PageMain />
     <PageFooter />
-
   </div>
 </template>
 

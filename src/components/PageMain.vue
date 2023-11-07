@@ -1,7 +1,7 @@
 <script>
 import Card from './Card.vue';
 export default {
-    component: {
+    components: {
         Card,
     },
     data() {
@@ -20,30 +20,10 @@ export default {
                 <div class="container">
                     <div class="row">
                         <!--inizio-prima-img-->
-                        <div class="col-4 first-image">
-
-                            <figure>
-                                <img class="web-1" src="/img/1.webp" alt="">
-                                <img class="web-2" src="/img/1b.webp" alt="">
-                            </figure>
-
-
-                            <p class="brand">Levis</p>
-                            <h4 class="product">RELAXED FIT TEE UNISEX</h4>
-
-                            <div class="price">
-                                <span class="new-price">14,99 &euro;</span>
-                                <span class="old-price">29,99 &euro;</span>
-                            </div>
-
-                            <div class="absolute">
-                                <p class="red">-50%</p>
-                                <p class="green">Sostenibilità</p>
-                                <p id="heart" class="heart">&hearts;</p>
-                            </div>
-
-
+                        <div v-for="n in 6" class="col-4">
+                            <Card />
                         </div>
+
                         <!--fine-prima-img-->
                     </div>
                 </div>
