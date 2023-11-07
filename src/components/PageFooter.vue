@@ -31,9 +31,7 @@ export default {
                             <p>Trovaci su :</p>
                             <div class="social">
 
-                                <img src="./img/facebook.png" alt="">
-                                <img src="./img/youtube.png" alt="">
-                                <img src="./img/twitter.png" alt="">
+
                             </div>
                         </div>
                     </div>

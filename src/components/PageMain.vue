@@ -1,12 +1,17 @@
 <script>
 import Card from './Card.vue';
+import cardsJson from '/src/db.json'
+
+
+
 export default {
     components: {
         Card,
     },
     data() {
         return {
-            main: 'ciao'
+            products: cardsJson.products
+
         }
     }
 }
@@ -20,8 +25,8 @@ export default {
                 <div class="container">
                     <div class="row">
                         <!--inizio-prima-img-->
-                        <div v-for="n in 6" class="col-4">
-                            <Card />
+                        <div v-for="(product, i) in products" class="col-4">
+                            <Card :item="product" />
                         </div>
 
                         <!--fine-prima-img-->

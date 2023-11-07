@@ -1,8 +1,17 @@
 <script>
 export default {
+    props: {
+        item: {
+            type: Object,
+        }
+    },
     data() {
         return {
-            message: 'ciao'
+        }
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href
         }
     }
 }
@@ -11,24 +20,24 @@ export default {
 <template>
     <div>
 
-        <div class="col-4 first-image">
+        <div class="col-4 ">
 
             <figure>
-                <img class="web-1" src="/img/1.webp" alt="">
-                <img class="web-2" src="/img/1b.webp" alt="">
+                <img class="web-1" :src="getImagePath(`/img/${item.frontImage}`)" alt="">
+                <img class="web-2" :src="getImagePath(`/img/${item.backImage}`)" alt="">
             </figure>
 
 
-            <p class="brand">Levis</p>
-            <h4 class="product">RELAXED FIT TEE UNISEX</h4>
+            <p class="brand">{{ item.brand }}</p>
+            <h4 class="product">{{ item.name }}</h4>
 
             <div class="price">
-                <span class="new-price">14,99 &euro;</span>
-                <span class="old-price">29,99 &euro;</span>
+                <span class="new-price">{{ item.price }} &euro;</span>
+
             </div>
 
             <div class="absolute">
-                <p class="red">-50%</p>
+                <p class="red">-20%</p>
                 <p class="green">Sostenibilità</p>
                 <p id="heart" class="heart">&hearts;</p>
             </div>
