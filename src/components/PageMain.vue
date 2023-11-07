@@ -25,7 +25,7 @@ export default {
                 <div class="container">
                     <div class="row">
                         <!--inizio-prima-img-->
-                        <div v-for="(product, i) in products" class="col-4">
+                        <div v-for="(product, id) in products" :key="id" class="col-4">
                             <Card :item="product" />
                         </div>
 

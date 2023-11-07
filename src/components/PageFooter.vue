@@ -30,8 +30,6 @@ export default {
                         <div class="col">
                             <p>Trovaci su :</p>
                             <div class="social">
-
-
                             </div>
                         </div>
                     </div>

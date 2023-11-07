@@ -21,24 +21,25 @@ export default {
     <div>
 
         <div class="col-4 ">
-
             <figure>
                 <img class="web-1" :src="getImagePath(`/img/${item.frontImage}`)" alt="">
                 <img class="web-2" :src="getImagePath(`/img/${item.backImage}`)" alt="">
             </figure>
-
 
             <p class="brand">{{ item.brand }}</p>
             <h4 class="product">{{ item.name }}</h4>
 
             <div class="price">
                 <span class="new-price">{{ item.price }} &euro;</span>
-
             </div>
 
             <div class="absolute">
-                <p class="red">-20%</p>
-                <p class="green">Sostenibilità</p>
+                <p class="red" v-for="(badge, index) in item.badges" :key="index">
+                    <span v-show="badge.type === 'discount'">{{ badge.value }}</span>
+                </p>
+                <p class="green" v-for="(badge, index) in item.badges" :key="index">
+                    <span v-show="badge.type === 'tag'"> {{ badge.value }}</span>
+                </p>
                 <p id="heart" class="heart">&hearts;</p>
             </div>
         </div>
