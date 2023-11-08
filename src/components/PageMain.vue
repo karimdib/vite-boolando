@@ -8,9 +8,8 @@ export default {
     },
     data() {
         return {
+            message: 'ciao',
             store: store,
-            products: store.products
-
         }
     }
 }
@@ -24,7 +23,7 @@ export default {
                 <div class="container">
                     <div class="row">
                         <!--inizio-prima-img-->
-                        <div v-for="(product, id) in products" :key="id" class="col-4">
+                        <div v-for="(product, id) in store.products" :key="id" class="col-4">
                             <Card :item="product" />
                         </div>
 
