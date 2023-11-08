@@ -33,11 +33,11 @@ export default {
                 <span class="new-price">{{ item.price }} &euro;</span>
             </div>
 
-            <div class="absolute">
-                <p class="red" v-for="(badge, index) in item.badges" :key="index">
+            <div class="entity-icon">
+                <p class="red" v-for="(badge, index) in item.badges" :class="badge.type" :key="index">
                     <span v-show="badge.type === 'discount'">{{ badge.value }}</span>
                 </p>
-                <p class="green" v-for="(badge, index) in item.badges" :key="index">
+                <p class="green" v-for="(badge, index) in item.badges" :class="badge.type" :key="index">
                     <span v-show="badge.type === 'tag'"> {{ badge.value }}</span>
                 </p>
                 <p id="heart" class="heart">&hearts;</p>
@@ -62,8 +62,8 @@ export default {
 }
 
 
-.absolute {
-    .red {
+.entity-icon {
+    .discount {
         background-color: red;
         position: absolute;
         padding: 4px;
@@ -73,7 +73,7 @@ export default {
         z-index: 40;
     }
 
-    .green {
+    .tag {
         background-color: green;
         color: white;
         padding: 4px;

@@ -1,6 +1,6 @@
 <script>
 import Card from './Card.vue';
-import cardsJson from '/src/db.json'
+import { store } from '/store.js'
 
 
 
@@ -10,7 +10,8 @@ export default {
     },
     data() {
         return {
-            products: cardsJson.products
+            store: store,
+            products: store.products
 
         }
     }
