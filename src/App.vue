@@ -4,6 +4,8 @@ import PageFooter from './components/PageFooter.vue';
 import PageMain from './components/PageMain.vue';
 import Card from './components/Card.vue';
 
+import axios from 'axios';
+import { store } from '../store';
 
 
 export default {
@@ -15,8 +17,18 @@ export default {
   },
   data() {
     return {
-      message: 'ciao',
+      store: store,
+      message: 'ccod',
     }
+  },
+  created() {
+    axios
+      .get('http://localhost:3000/products')
+      .then(reply => {
+        const products = reply.data
+
+        store.products = products
+      })
   }
 }
 </script>
