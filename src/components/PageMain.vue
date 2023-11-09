@@ -44,7 +44,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="modal-content">
+                <div v-if="show" class="modal-content">
                     <div class="product__modal">
                         <p>titolo</p>
                         <p @click="removeModal">
