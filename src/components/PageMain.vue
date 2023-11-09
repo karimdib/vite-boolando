@@ -54,6 +54,9 @@ export default {
                         <div class="brand__product">
                             <div>{{ dataModal.brand }}</div>
                         </div>
+                        <div class="price__product">
+                            <div> &euro;{{ dataModal.price }}</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -102,6 +105,12 @@ export default {
 
         p {
             font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .brand__product {
+            width: 100%;
             font-weight: 700;
             margin-bottom: 10px;
         }
