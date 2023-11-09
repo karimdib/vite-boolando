@@ -1,15 +1,29 @@
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Card from './Card.vue';
 import { store } from '/store.js'
 
 export default {
     components: {
         Card,
+        FontAwesomeIcon
     },
     data() {
         return {
             message: 'ciao',
             store: store,
+            show: false,
+            dataModal: {}
+        }
+    },
+    methods: {
+        showModal() {
+            this.show = true
+            console.log('ciao sono un $emit', this.show)
+        },
+        removeModal() {
+            this.show = false
+            console.log('sono un event e chiudo l $emit', this.show)
         }
     }
 }
@@ -18,16 +32,24 @@ export default {
 <template>
     <div>
         <main>
+
+
             <!--inizio prima section-->
             <section>
                 <div class="container">
                     <div class="row">
                         <!--inizio-prima-img-->
                         <div v-for="(product, id) in store.products" :key="id" class="col-4">
-                            <Card :item="product" />
+                            <Card @prodotto="showModal" :item="product" />
                         </div>
-
-                        <!--fine-prima-img-->
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="product__modal">
+                        <p>titolo</p>
+                        <p @click="removeModal">
+                            <awesome-icon icon=circle-xmark />
+                        </p>
                     </div>
                 </div>
             </section>
@@ -45,6 +67,38 @@ export default {
 
     p {
         width: max-content;
+    }
+}
+
+.modal-content {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+    .product__modal {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        max-width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px;
+        z-index: 901;
+
+        p {
+            font-size: 20px;
+            font-weight: 700;
+        }
     }
 }
 

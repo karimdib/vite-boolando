@@ -7,14 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
     faUser,
     faHeart,
-    faBagShopping
+    faBagShopping,
+    faCircleXmark,
 
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faUser,
     faHeart,
-    faBagShopping
+    faBagShopping,
+    faCircleXmark
 )
 
 

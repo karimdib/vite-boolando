@@ -20,7 +20,7 @@ export default {
 <template>
     <div>
 
-        <div class="col-4 ">
+        <div class="col-4 " @click="$emit('prodotto', item.name)">
             <figure>
                 <img class="web-1" :src="getImagePath(`/img/${item.frontImage}`)" alt="">
                 <img class="web-2" :src="getImagePath(`/img/${item.backImage}`)" alt="">
