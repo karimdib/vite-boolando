@@ -45,7 +45,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div v-if="show" class="modal-content">
+                <div v-if="show" class="modal">
                     <div class="product__modal">
                         <p>{{ dataModal.name }}</p>
                         <p @click="removeModal">
@@ -71,7 +71,7 @@ export default {
     }
 }
 
-.modal-content {
+.modal {
     width: 100%;
     position: fixed;
     top: 0;
@@ -80,7 +80,6 @@ export default {
     bottom: 0;
     z-index: 900;
     background-color: rgba(0, 0, 0, 0.5);
-
 
     .product__modal {
         display: flex;
