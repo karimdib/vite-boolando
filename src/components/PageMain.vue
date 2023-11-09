@@ -51,6 +51,9 @@ export default {
                         <p @click="removeModal">
                             <awesome-icon icon=circle-xmark />
                         </p>
+                        <div class="brand__product">
+                            <div>{{ dataModal.brand }}</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -74,6 +77,8 @@ export default {
 .modal {
     width: 100%;
     position: fixed;
+    display: flex;
+    flex-wrap: wrap;
     top: 0;
     left: 0;
     right: 0;
@@ -83,7 +88,7 @@ export default {
 
     .product__modal {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-between;
         background-color: white;
         position: fixed;
@@ -98,6 +103,7 @@ export default {
         p {
             font-size: 20px;
             font-weight: 700;
+            margin-bottom: 10px;
         }
     }
 }
@@ -131,6 +137,7 @@ export default {
         background: white;
         padding: 10px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         z-index: 32;
