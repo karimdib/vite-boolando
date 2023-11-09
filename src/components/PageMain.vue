@@ -17,8 +17,9 @@ export default {
         }
     },
     methods: {
-        showModal() {
+        showModal(item) {
             this.show = true
+            this.dataModal = item
             console.log('ciao sono un $emit', this.show)
         },
         removeModal() {
@@ -46,7 +47,7 @@ export default {
                 </div>
                 <div v-if="show" class="modal-content">
                     <div class="product__modal">
-                        <p>titolo</p>
+                        <p>{{ dataModal.name }}</p>
                         <p @click="removeModal">
                             <awesome-icon icon=circle-xmark />
                         </p>
